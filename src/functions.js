@@ -105,8 +105,9 @@ function convertMyNumber(myNumber) {
     let units = Math.floor (myNumber % 10);
     let text = stringHundreds[hundreds - 1];
 
-    if (dozens === 1 && units !== 0) {
-      text = text + " " + stringBelowTwenty[(dozens * 10) - 1];
+    if (Math.floor(dozens) === 1 && units !== 0) {
+ 
+      text = text + " " + stringBelowTwenty[(Math.round(dozens * 10)) - 1];
     }
 
     if (Math.floor(dozens) >= 2 && units === 0) {
@@ -130,11 +131,12 @@ function convertMyNumber(myNumber) {
   }
 }
 
-console.log('[convertionMyNumber]', convertMyNumber(227));
+console.log('[convertionMyNumber]', convertMyNumber(217));
 
 // 4.	Вводим строку, которая содержит число, написанное прописью (0-999). Получить само число
-function getNumber(number) {
+function getNumber(str) {
   const arrStringBelowTwenty = [
+    "ноль",
     "один",
     "два",
     "три",
@@ -178,8 +180,50 @@ function getNumber(number) {
     "девятьсот",
   ];
   
-  const arrNumberOnes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const arrNumberTeens = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-  const arrNumberTens = [20, 30, 40, 50, 60, 70, 80, 90];
+  const arrNumberBelowTwenty = [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+  ];
+  const arrNumberTens = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+  const arrNumberHundreds = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
+  let arrStr = str.split(' ');
+  if (arrStr.length === 1) {
+    
+    if (arrStringBelowTwenty.includes(arrStr[0])) {
+        
+      return arrNumberBelowTwenty[arrStringBelowTwenty.indexOf(arrStr[0])];
+
+    } else if (arrStringTens.includes(arrStr[0])) {
+      
+      return arrNumberTens[arrStringTens.indexOf(arrStr[0])];
+    } else {
+
+      return arrNumberHundreds[arrStringHundreds.indexOf(arrStr[0])];
+    }
+  } else if (arrStr.length === 2) {
+    if (arrStringTens.includes(arrStr[0])) {
+      let tens = arrNumberTens[arrStringTens.indexOf(arrStr[0])];
+      let units = arrNumberBelowTwenty[arrStringBelowTwenty.indexOf(arrStr[1])];
+      return tens + units;
+    } else {
+      let hundreds = arrNumberHundreds[arrStringHundreds.indexOf(arrStr[0])];
+      let units =
+        arrNumberBelowTwenty[arrStringBelowTwenty.indexOf(arrStr[1])] ||
+        arrNumberTens[arrStringTens.indexOf(arrStr[1])];
+      return hundreds + units;
+    }
+  } else {
+    let units = arrNumberBelowTwenty[arrStringBelowTwenty.indexOf(arrStr[2])];
+    let tens = arrNumberTens[arrStringTens.indexOf(arrStr[1])];
+    let hundreds = arrNumberHundreds[arrStringHundreds.indexOf(arrStr[0])];
+    return hundreds + tens + units;
+  }
+
+  console.log("[arrStr]", arrStr);
 }
+
+console.log('[getNumber(сорок два)]', getNumber('сорок два'));
+console.log('[getNumber(сто семнадцать)]', getNumber('сто семнадцать'));
+console.log('[getNumber(двести сорок)]', getNumber('двести сорок'));
+console.log('[getNumber(сто двадцать два)]', getNumber('сто двадцать два'));
+console.log('[getNumber(триста сорок один)]', getNumber('триста сорок один'));
