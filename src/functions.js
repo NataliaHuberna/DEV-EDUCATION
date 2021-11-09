@@ -30,7 +30,7 @@ const point = new Point();
 console.log(point.getDistance(new Point(7, 2), new Point(1, 2)));
 
 // 3.	Вводим число(0-999), получаем строку с прописью числа.
-let myNumber
+
 function convertMyNumber(myNumber) {
   const stringBelowTwenty = [
     "один",
