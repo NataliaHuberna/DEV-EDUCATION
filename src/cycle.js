@@ -8,11 +8,12 @@ function getSumAndCount () {
       count++;
     }
   }
-  return `sum = ${sum}, count = ${count}`
+  return {
+    'sum': sum,
+    'count': count,
+  }
 }
  
-console.log('[getSumAndCount]', getSumAndCount());
-
 // 2.	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
 
 function checkNumber (num) {
@@ -25,19 +26,15 @@ function checkNumber (num) {
   return marker;
 }
 
-console.log('[checkNumber (8)]', checkNumber (8));
-
 // 3.	Найти корень натурального числа с точностью до целого (рассмотреть вариант последовательного подбора и метод бинарного поиска)
 function getSqrt (num) {
   for (i = 1; i <= num; i++) {
     if (i * i === num) {
-      return `sqrt = ${i}`;
+      return i;
     } 
   }
   return "Number has no whole square root";
 }
-
-console.log('[getSqrt (7)]', getSqrt(7));
 
 // 4.	Вычислить факториал числа n. n! = 1*2*…*n-1*n;
 function countFactorial (num) {
@@ -48,8 +45,6 @@ function countFactorial (num) {
   return factorial;
 }
 
-console.log('[countFactorial (num)]', countFactorial (3));
-
 // 5.	Посчитать сумму цифр заданного числа
 function countSumOfNums (myNumber) {
   sum = 0;
@@ -59,8 +54,6 @@ function countSumOfNums (myNumber) {
   }
   return sum;
 }
-
-console.log('[countSumOfNums (112)]', countSumOfNums (112));
 
 // 6.	Вывести число, которое является зеркальным отображением последовательности цифр заданного числа, например, задано число 123, вывести 321.
 
@@ -73,5 +66,3 @@ function getMirrow (myNumber) {
   }
   return result;
 }
-
-console.log('[getMirrow (123456)]', getMirrow (123456));

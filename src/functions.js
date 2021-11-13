@@ -1,7 +1,7 @@
 // 1.	Получить строковое название дня недели по номеру дня.
 function getWeekDay() {
-    let dayNumber = new Date();
-       let days = [
+    const dayNumber = new Date();
+      const days = [
       "Sunday",
       "Monday",
       "Tuesday",
@@ -10,7 +10,7 @@ function getWeekDay() {
       "Friday",
       "Saturday"
     ];
-    let day = dayNumber.getDay();
+    const day = dayNumber.getDay();
     return days[day];
 }
 console.log(getWeekDay());
@@ -106,13 +106,12 @@ function convertMyNumber(myNumber) {
     let text = stringHundreds[hundreds - 1];
 
     if (Math.floor(dozens) === 1 && units !== 0) {
- 
       text = text + " " + stringBelowTwenty[(Math.round(dozens * 10)) - 1];
     }
 
     if (Math.floor(dozens) >= 2 && units === 0) {
         text = text + " " + stringTens[Math.floor(dozens) - 1];
-      }
+    }
 
     if (Math.floor(dozens) === 0 && units !== 0) {
       text = text + " " + stringBelowTwenty[units - 1];

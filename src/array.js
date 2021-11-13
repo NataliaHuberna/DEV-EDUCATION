@@ -11,8 +11,6 @@ function findMinElement (arr) {
   return minValue;
 }
 
-console.log('[findMinElement (arr)]', findMinElement ([6, 5, 3, 4, 2]));
-
 // 2.	Найти максимальный элемент массива
 function findMaxElement (arr) {
   let arrLength = arr.length;
@@ -26,8 +24,6 @@ function findMaxElement (arr) {
   return maxValue;
 }
 
-console.log("[findMaxElement]", findMaxElement([6, 5, 10, 4, 2]));
-
 // 3.	Найти индекс минимального элемента массива
 function findIndexMin (arr) {
   let indexMinElement = 0;
@@ -40,8 +36,6 @@ function findIndexMin (arr) {
   return indexMinElement;
 }
 
-console.log("findIndex ([6, 5, 10, 4, 2])", findIndexMin ([1, 5, 10, 4, 2]));
-
 // // 4.	Найти индекс максимального элемента массива
 function getIndexMax (arr) {
   let indexMaxElement = 0;
@@ -53,7 +47,6 @@ function getIndexMax (arr) {
   }
   return indexMaxElement;
 }
-console.log("[getIndexMax ([1, 5, 10, 4, 2])]", getIndexMax ([1, 5, 10, 4, 2]));
 
 // // 5.	Посчитать сумму элементов массива с нечетными индексами
 function getSumOddIndex (arr) {
@@ -67,8 +60,6 @@ function getSumOddIndex (arr) {
   return sumOddIndex;
 }
 
-console.log("[getSumOddIndex ([1, 5, 10, 4, 2])]", getSumOddIndex([1, 5, 10, 4, 2]));
-
 // // 6.	Сделать реверс массива (массив в обратном направлении)
 function reverseArr (arr) {
   for (i = 0; i < arr.length - 1; i++) {
@@ -80,11 +71,7 @@ function reverseArr (arr) {
   }
   return arr;
 }
-
-console.log("[reverseArr ([1, 5, 10, 4, 2])]", reverseArr([1, 5, 10, 4, 2]));
-
-
-// // 7.	Посчитать количество нечетных элементов массива
+ // 7.	Посчитать количество нечетных элементов массива
 function countOddElements (arr) {
   let quantumOddIndex = 0;
 
@@ -95,8 +82,6 @@ function countOddElements (arr) {
   }
   return quantumOddIndex;
 }
-
-console.log("countOddElements ([1, 5, 10, 4, 2])", countOddElements([1, 5, 10, 4, 2]));
 
 // // 8.	Поменять местами первую и вторую половину массива, например, для массива
 function changeHalf (arr) {
@@ -111,4 +96,4 @@ function changeHalf (arr) {
   return arr;
 }
 
-console.log("changeHalf ([1, 5, 10, 4, 2])", changeHalf([1, 5, 10, 4, 2]));
+console.log("changeHalf ([1, 5, 10, 4, 2])", changeHalf([4, 2, 10, 1, 5]));
