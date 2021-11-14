@@ -1,19 +1,30 @@
 // 1.	Получить строковое название дня недели по номеру дня.
-function getWeekDay() {
-    const dayNumber = new Date();
-      const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
-    const day = dayNumber.getDay();
-    return days[day];
+// function getWeekDay() {
+//     const dayNumber = new Date();
+//       const days = [
+//       "Sunday",
+//       "Monday",
+//       "Tuesday",
+//       "Wednesday",
+//       "Thursday",
+//       "Friday",
+//       "Saturday"
+//     ];
+//     const day = dayNumber.getDay();
+//     return days[day];
+// }
+function getWeekDay (dayNumber) {
+  const days = [
+    "Воскресенье",
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+  ];
+  return days[dayNumber];
 }
-console.log(getWeekDay());
 
 // 2.	Найти расстояние между двумя точками в двухмерном декартовом пространстве.
 class Point {
@@ -77,15 +88,19 @@ function convertMyNumber(myNumber) {
   ];
 
       
-  if (myNumber < 0 || myNumber > 1000) {
+  if (myNumber < 0 || myNumber > 999) {
     return "Неверный диапазон";
+  }
+  
+  if (myNumber === 0) {
+    return "ноль";
   }
   
   if (myNumber < 20) {
     return stringBelowTwenty[myNumber - 1];
   }
   
-  if (myNumber > 20 && myNumber < 100) {
+  if (myNumber > 19 && myNumber < 100) {
     let high = myNumber / 10;
     let low = myNumber % 10;
     let text = stringTens[Math.floor(high) - 1];
