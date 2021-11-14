@@ -1,19 +1,3 @@
-// const arr = [
-//           {
-//             title: "Some title1",
-//           },
-//           {
-//             title: "I like JS",
-//           },
-//           {
-//             user: "This obj doesn’t have key title js",
-//           },
-
-//           {
-//             title: "Js - is the best!",
-//           },
-//         ];
-//         const answer = [{ title: "I like JS" }, { title: "Js - is the best!" }];
 describe('check file objects in JavaScript', function () {
     describe("Составьте алгоритм, который считает, сколько времени вам нужно на приготовление яиц", function () {
         it('should return number of minutes', function () {
