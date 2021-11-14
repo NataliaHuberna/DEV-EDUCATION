@@ -6,9 +6,6 @@ function getResult(a, b) {
         : a * b);
 }
 
-console.log('[getResult(4, 3)]', getResult(4, 3));
-
-
 // 2.	Определить какой четверти принадлежит точка с координатами (х,у)
 
 function defineQuater(x, y) {
@@ -33,8 +30,6 @@ function defineQuater(x, y) {
     return answer;
 }
 
-console.log('[defineQuater (-1, 3)]', defineQuater (-1, 3));
-
 // 3.	Найти суммы только положительных из трех чисел
 
 function getSum (d, e, f) {
@@ -54,8 +49,6 @@ let sum = 0;
     return sum;
 }
 
-console.log('[ getSum (-2, -3, 4)]', getSum(-2, -3, 4));
-
 // 4.	Посчитать выражение (макс(а*б*с, а+б+с))+3
 
 function countMaxExpression(g, h, i) {
@@ -65,8 +58,6 @@ let add = g + h + i;
         ? mult += 3
         : add += 3);
 }
-
-console.log('[countMaxExpression (1, 2, 3)]', countMaxExpression(1, 2, 3));
 
 // 5.	Написать программу определения оценки студента по его рейтингу, на основе следующих 
 function getMark(rating) {
@@ -96,5 +87,3 @@ function getMark(rating) {
     }
     return mark;
 }
-
-console.log('[getMark(100)]', getMark(100));

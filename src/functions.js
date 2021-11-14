@@ -13,7 +13,7 @@
 //     const day = dayNumber.getDay();
 //     return days[day];
 // }
-function getWeekDay (dayNumber) {
+function getWeekDay(dayNumber) {
   const days = [
     "Воскресенье",
     "Понедельник",
@@ -145,8 +145,6 @@ function convertMyNumber(myNumber) {
   }
 }
 
-console.log('[convertionMyNumber]', convertMyNumber(217));
-
 // 4.	Вводим строку, которая содержит число, написанное прописью (0-999). Получить само число
 function getNumber(str) {
   const arrStringBelowTwenty = [
@@ -236,8 +234,3 @@ function getNumber(str) {
   console.log("[arrStr]", arrStr);
 }
 
-console.log('[getNumber(сорок два)]', getNumber('сорок два'));
-console.log('[getNumber(сто семнадцать)]', getNumber('сто семнадцать'));
-console.log('[getNumber(двести сорок)]', getNumber('двести сорок'));
-console.log('[getNumber(сто двадцать два)]', getNumber('сто двадцать два'));
-console.log('[getNumber(триста сорок один)]', getNumber('триста сорок один'));

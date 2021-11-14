@@ -95,5 +95,3 @@ function changeHalf (arr) {
   }
   return arr;
 }
-
-console.log("changeHalf ([1, 5, 10, 4, 2])", changeHalf([4, 2, 10, 1, 5]));
