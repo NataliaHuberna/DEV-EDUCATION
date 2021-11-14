@@ -5,7 +5,6 @@ function getCookingTime(eggsAmount) {
     result = Math.ceil(eggsAmount / 5) * 5;
     return result;
 }
-console.log('[getCookingTime(30)]', getCookingTime(14));
 
 // 2.Получая массив чисел. Все они либо нечетные, либо четные, кроме одного. Тебе нужно его найти.
 function getNumber(array) {
@@ -21,11 +20,6 @@ function getNumber(array) {
       return result;
 }
 
-getNumber([1, 5, 7, 9, 15, 19, 777, -15, -11, 4, 9, 23, -17]);
-getNumber([0, 2, 8, -4, 0, -122, 13, -4, 28, 12]);
-
-console.log('[getNumber([0, 2, 8, -4, 0, -122, 13, -4, 28, 12])]', getNumber([0, 2, 8, -4, 0, -122, 13, -4, 28, 12]));
-console.log('[getNumber([1, 5, 7, 9, 15, 19, 777, -15, -11, 4, 9, 23, -17])]', getNumber([1, 5, 7, 9, 15, 19, 777, -15, -11, 4, 9, 23, -17]));
 
 // 3. Принимая массив объектов и случайную строку. У объектов может быть ключ: «title» с разными значениями. Создайте алгоритм, который фильтрует массив, заданный как первый параметр, и возвращает массив объектов, которые содержат в своих заголовках заданную строку в качестве второго параметра (без учета регистра).
 
@@ -100,7 +94,7 @@ getNextPalindrome(888) // returns 898
 getNextPalindrome(999) // returns 1001
 
 // 6. Создать структуру данных Set, используя объект, создать методы add, remove, has
-setWithObject = {
+const setWithObject = {
   add: function (value) {
     return (this[value] = 0);
   },
@@ -115,6 +109,7 @@ setWithObject = {
 setWithObject.add("d");
 setWithObject.add("e");
 setWithObject.add("v");
+// console.log(setWithObject)
 console.log(setWithObject.has("e"));
 console.log(setWithObject.remove("e"));
 console.log(setWithObject.has("e"));
