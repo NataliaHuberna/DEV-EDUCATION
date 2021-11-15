@@ -63,12 +63,8 @@ function countCharacters(string) {
   let result = [...string].reduce((item, index) => { item[index] = item[index] ? item[index] + 1 : 1; return item; }, {}); 
 return result;
 }
-countCharacters('sparrow') // should return {s: 1, p: 1, a: 1, r: 2, o: 1, w: 1}
-console.log('[countCharacters(sparrow)]', countCharacters('sparrow'));
-countCharacters('aabcddeffge') // should return {a: 2, b: 1, c: 1, d: 2, e: 2, f: 2, g: 1}
-console.log('[countCharacters(aabcddeffge)]', countCharacters('aabcddeffge'));
+
 countCharacters('a 2ab!d') // should return {a: 2, b:1, d:1, 2:1}
-console.log('[countCharacters(a 2ab!d)]', countCharacters('a 2ab!d'));
 
 // 5 Принимая число, ваша функция должна найти следующий положительный палиндром большего размера.
 
@@ -85,13 +81,6 @@ function getNextPalindrome(number) {
 
   return result;
 }
-
-getNextPalindrome(7) // returns 11
-console.log('[getNextPalindrome(7)]', getNextPalindrome(99));
-getNextPalindrome(99) //returns 101
-getNextPalindrome(132) // returns 141
-getNextPalindrome(888) // returns 898
-getNextPalindrome(999) // returns 1001
 
 // 6. Создать структуру данных Set, используя объект, создать методы add, remove, has
 const setWithObject = {
