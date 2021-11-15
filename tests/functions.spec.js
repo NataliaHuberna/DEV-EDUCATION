@@ -13,6 +13,21 @@ describe("check file functions", function () {
             expect(point.getDistance(new Point(1, 4), new Point(1, 1))
             ).to.be.equal(3);
         });
+      
+        it("should return distance between points if one coordinate is 0", function () {
+            expect(point.getDistance(new Point(0, 4), new Point(2, 4))
+            ).to.be.equal(2);
+        });
+      
+        it("should return distance between points if two coordinate is 0", function () {
+            expect(point.getDistance(new Point(0, 0), new Point(0, 4))
+            ).to.be.equal(4);
+        });
+      
+        it("should return 0 between points if all coordinate is 0", function () {
+            expect(point.getDistance(new Point(0, 0), new Point(0, 0))
+            ).to.be.equal(0);
+        });
     });
     describe("Вводим число(0-999), получаем строку с прописью числа", function () {
         it("should return Неверный диапазон for numbers below 0", function () {

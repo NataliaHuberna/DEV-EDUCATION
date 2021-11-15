@@ -72,11 +72,11 @@ function reverseArr (arr) {
   return arr;
 }
  // 7.	Посчитать количество нечетных элементов массива
-function countOddElements (arr) {
+function countOddElements(arr) {
   let quantumOddIndex = 0;
 
-  for (i = 1; i < arr.length; i++) {
-    if (i % 2 === 1) {
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 1 || arr[i] % 2 === -1) {
       quantumOddIndex++;
     }
   }
@@ -84,7 +84,8 @@ function countOddElements (arr) {
 }
 
 // // 8.	Поменять местами первую и вторую половину массива, например, для массива
-function changeHalf (arr) {
+function changeHalf(arr) {
+  if (arr.length === 0) return "Array is empty";
   let halfLength = Math.floor(arr.length / 2);
   let centerElement = halfLength + (arr.length % 2);
 

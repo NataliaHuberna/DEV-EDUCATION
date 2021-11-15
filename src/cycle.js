@@ -16,7 +16,8 @@ function getSumAndCount () {
  
 // 2.	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
 
-function checkNumber (num) {
+function checkNumber(num) {
+  if (num < 1) return "Number is less one";
   let marker = "Prime number";
   for (let j = 2; j < num; j++) {
     if (num % j == 0) {
@@ -27,7 +28,8 @@ function checkNumber (num) {
 }
 
 // 3.	Найти корень натурального числа с точностью до целого (рассмотреть вариант последовательного подбора и метод бинарного поиска)
-function getSqrt (num) {
+function getSqrt(num) {
+  if(num<1) return "Number is not natural";
   for (i = 1; i <= num; i++) {
     if (i * i === num) {
       return i;
