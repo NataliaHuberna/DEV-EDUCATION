@@ -83,7 +83,7 @@ function getNextPalindrome(number) {
 }
 
 // 6. Создать структуру данных Set, используя объект, создать методы add, remove, has
-const setWithObject = {
+setWithObject = {
   add: function (value) {
     return (this[value] = 0);
   },
@@ -98,7 +98,6 @@ const setWithObject = {
 setWithObject.add("d");
 setWithObject.add("e");
 setWithObject.add("v");
-// console.log(setWithObject)
 console.log(setWithObject.has("e"));
 console.log(setWithObject.remove("e"));
 console.log(setWithObject.has("e"));

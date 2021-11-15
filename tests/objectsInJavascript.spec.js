@@ -112,4 +112,19 @@ describe('check file objects in JavaScript', function () {
           expect(getNextPalindrome(999)).to.be.equal(1001);
         });
     });
+    describe("Создать структуру данных Set, используя объект, создать методы add, remove, has", function () {
+      it("should return boolean for method add", function () {
+        expect(setWithObject.add("e")).to.be.true;
+      });
+
+      it("should return boolean for method has", function () {
+        expect(setWithObject.has("e")).to.be.true;
+      });
+
+      it("should return boolean for method remove", function () {
+        expect(setWithObject.remove("e")).to.be.true;
+      });
+
+      
+    });
 })
