@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+    <link rel="stylesheet" href="src/style.css" class="style" />
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="head">Singly Linked List</h1>
+        </header>
+        <div class="list-wrapper">
+            <div class ="pointer-head">Head</div>
+            <div id="linkedList" class="list"></div>
+            <!-- <div class="null"><span>&#8658</span></div> -->
+        </div>
+        <form >
+            <div class="input-wrapper">
+                <p class="length">Length of the Linked list<span class="length-list">0</span></p>
+                <input type="text" placeholder="Enter the value">
+            </div>
+            <div class="button-wrapper">
+                <button type="button" class="add-element">Add element</button>
+                <button type="button" class="add-array">Add array</button>
+                <button type="button" class="remove-element">Remove element</button>
+                <button type="button" class="remove-last">Remove last</button>
+            </div>
+        </form>
+    </div>
+    <script src="./src/script.js"></script>
+    <div id="mocha"></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+    <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/2.2.2/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <!-- <script src="tests/script.spec.js"></script> -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+</html>
