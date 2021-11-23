@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <header class ="header container">
+        <div class="header__content">
+            <a href="index.html" class="header__logo">Pictures Gallery</a>
+            <div class="pagination">
+                <button class="prev" disabled>&laquo;</button>
+                <button data-number="1" class = "active">1</button>
+                <button data-number="2">2</button>
+                <button data-number="3">3</button>
+                <button data-number="4">4</button>
+                <button data-number="5">5</button>
+                <button class="next">&raquo;</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="full-picture" id="fullPictureBox">
+            <img src="https://vjoy.cc/wp-content/uploads/2019/07/1-1.jpg" id="fullPicture" alt="">
+            <span onclick="closeFullPicture(this.src)">X</span>
+        </div>
+        <div class="pictures">
+            
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
