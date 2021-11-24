@@ -1,3 +1,5 @@
+import './style.css'; 
+
 const fullPictureBox = document.getElementById("fullPictureBox");
 const fullPicture = document.getElementById("fullPicture");
 const randomDogsElement = document.querySelector(".pictures");
@@ -5,12 +7,12 @@ const pagination = document.querySelector(".pagination");
 const buttons = document.querySelectorAll('button');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
+const close = document.getElementById('close');
 
 let current = 1;
 
 const API_URL = "https://dog.ceo/api/breeds/image/random/30";
 
-const pic = fullPicture.src;
 function openFullPicture(pic) {
   fullPictureBox.style.display = "flex";
   fullPicture.src = pic;
@@ -25,17 +27,26 @@ function createTemplate(dogImage) {
             <div class="picture">
                 <div class="picture__cover__inner">
                     <img src="${dogImage}" alt=""
-                    class = "picture__cover" onclick="openFullPicture('${dogImage}')">
+                    class = "picture__cover" >
                 </div>
             </div>
             `;
 }
 
+randomDogsElement.addEventListener('click', (e) => {
+  const elem = e.target;
+  if (elem.tagName === 'IMG') {
+    openFullPicture(elem.src)
+  }
+});
+
+close.addEventListener('click', closeFullPicture);
+
 async function getRandomDogs() {
     const response = await fetch(API_URL);
     const json = await response.json();
     printPictures(json.message);
-}
+ }
 
 function printPictures(arrUrl) {
   pagination.addEventListener("click", (e) => {
@@ -75,3 +86,5 @@ function printPictures(arrUrl) {
 }
 
 getRandomDogs();
+
+  
