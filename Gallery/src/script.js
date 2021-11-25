@@ -1,4 +1,4 @@
-import './style.css'; 
+import './style.css';
 
 const fullPictureBox = document.getElementById("fullPictureBox");
 const fullPicture = document.getElementById("fullPicture");
@@ -48,7 +48,7 @@ async function getRandomDogs() {
     printPictures(json.message);
  }
 
-function printPictures(arrUrl) {
+export function printPictures(arrUrl) {
   pagination.addEventListener("click", (e) => {
     const button = e.target;
 
@@ -87,4 +87,3 @@ function printPictures(arrUrl) {
 
 getRandomDogs();
 
-  
