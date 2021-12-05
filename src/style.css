@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("fonts/Roboto-Regular.ttf") format('truetype');
+    font-weight: 400;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #1a191f;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1500px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.header__container {
+    padding: 20px 0;
+    border-bottom: white;
+    box-shadow: 0 0 20px white;
+}
+
+.header__title {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 4px 0px 7px white;
+}
+
+.main {
+    flex-grow: 1;
+    padding-top: 50px;
+ }
+
+.main__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    margin: auto 60px;
+}
+
+.slide img {
+    width: 850px;
+    height: 600px;
+    border: solid 5px white;
+    object-fit: cover;
+    box-shadow: 0 0 20px white;
+    border-radius: 10px;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.control__play img,
+.control__pause img,
+.slider-prev img, 
+.slider-next img {
+    width:50px;
+    height:50px;
+}
+
+button {
+    position: relative;
+    border-radius: 3px;
+}
+
+.button:hover,
+.button:active {
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+}
+
+button:disabled:hover {
+    box-shadow: 0 0 0 white;
+    cursor: default;
+}
+
