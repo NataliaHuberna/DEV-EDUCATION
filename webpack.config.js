@@ -30,18 +30,18 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|jfif|png|svg|gif)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-              outputPath: "images",
-            },
-          },
-        ],
+        test: /\.html$/i,
+        loader: "html-loader",
       }
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
+    open: true
+  },
 };

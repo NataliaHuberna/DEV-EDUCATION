@@ -1,41 +1,47 @@
-import {elements} from "./constants";
-
 export default class SliderShow {
-  constructor(API) {
-    (this.API = API),
+  elements = {
+    slide: document.querySelector(".slide img"),
+    prev: document.querySelector(".slider-prev"),
+    next: document.querySelector(".slider-next"),
+    play: document.querySelector(".control__play"),
+    pause: document.querySelector(".control__pause"),
+    API_URL: "https://dog.ceo/api/breeds/image/random/6",
+  }
+
+  constructor() {
       (this.arrUrl = []),
       (this.timerId = null),
       (this.count = 0);
   }
 
   async getRandomSlides() {
-    const res = await fetch(this.API);
+    const res = await fetch(this.elements.API_URL);
     const data = await res.json();
     this.arrUrl = data.message;
     this.init(this.arrUrl);
   }
 
   init(arr) {
-    elements.slide.src = arr[0];
+    this.elements.slide.src = arr[0];
   }
 
   prevSlide() {
     if (this.count === 0) {
       this.count = this.arrUrl.length - 1;
-      elements.slide.src = this.arrUrl[this.count];
+      this.elements.slide.src = this.arrUrl[this.count];
     } else {
       this.count--;
-      elements.slide.src = this.arrUrl[this.count];
+      this.elements.slide.src = this.arrUrl[this.count];
     }
   }
 
   nextSlide() {
     if (this.count === this.arrUrl.length - 1) {
       this.count = 0;
-      elements.slide.src = this.arrUrl[this.count];
+      this.elements.slide.src = this.arrUrl[this.count];
     } else {
       this.count++;
-      elements.slide.src = this.arrUrl[this.count];
+      this.elements.slide.src = this.arrUrl[this.count];
     }
   }
 
@@ -46,8 +52,8 @@ export default class SliderShow {
 
   stopShowingSlide() {
     clearTimeout(this.timerId);
-    elements.play.disabled = false;
-    elements.pause.disabled = true;
+    this.elements.play.disabled = false;
+    this.elements.pause.disabled = true;
   }
 
   clickNextBtn() {
@@ -61,8 +67,8 @@ export default class SliderShow {
   }
 
   clickPlay() {
-    elements.play.disabled = true;
-    elements.pause.disabled = false;
+    this.elements.play.disabled = true;
+    this.elements.pause.disabled = false;
     this.timerId = setTimeout(this.showSlide.bind(this), 1000);
   }
 }

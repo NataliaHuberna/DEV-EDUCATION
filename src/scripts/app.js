@@ -1,11 +1,10 @@
 import '../style.css';
-import {elements} from  './constants';
 import SliderShow from './class';
 
-const start = new SliderShow(elements.API_URL);
-start.getRandomSlides();
+const slider = new SliderShow();
+slider.getRandomSlides();
 
-elements.next.addEventListener("click", start.clickNextBtn.bind(start));
-elements.prev.addEventListener("click", start.clickPrevBtn.bind(start));
-elements.pause.addEventListener("click", start.stopShowingSlide.bind(start));
-elements.play.addEventListener("click", start.clickPlay.bind(start));
+slider.elements.next.addEventListener("click", slider.clickNextBtn.bind(slider));
+slider.elements.prev.addEventListener("click", slider.clickPrevBtn.bind(slider));
+slider.elements.pause.addEventListener("click", slider.stopShowingSlide.bind(slider));
+slider.elements.play.addEventListener("click", slider.clickPlay.bind(slider));
