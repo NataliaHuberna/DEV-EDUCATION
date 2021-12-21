@@ -1,0 +1,23 @@
+{
+  "name": "huberna",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-plugin-no-loops": "^0.3.0"
+  },
+  "description": "",
+  "dependencies": {
+    "ts": "^0.2.2",
+    "typescript": "^4.5.3"
+  }
+}
