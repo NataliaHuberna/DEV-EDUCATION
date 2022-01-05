@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="filter" name="filter" class="top-filter">
+            <div class="form-column">
+                <label>Min salary:
+                    <input type="number" name="minSalary" value="21000" />
+                </label>
+            </div>
+            <div class="form-column">
+                <label>
+                    Max salary
+                    <input type="number" name="maxSalary" value="25000" />
+                </label>
+            </div>
+            <div class="form-column">
+                <label for="contract">
+                    Contract
+                    <input type="radio" id="contract" name="isContract" checked value="1">
+                </label>
+                <label for="permanent">
+                    Permanent
+                    <input type="radio" id="permanent" name="isContract" value="0">
+                </label>
+            </div>
+            <div class="form-column">
+                <label for="fullTime">
+                    Full Time
+                    <input type="radio" id="fullTime" name="isFullTime" checked value="1">
+                </label>
+                <label for="partTime">
+                    Part time
+                    <input type="radio" id="partTime" name="isFullTime" value="0">
+                </label>
+            </div>
+            <div class="form-column">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="content">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>

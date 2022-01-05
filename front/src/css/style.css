@@ -1,0 +1,34 @@
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700); */
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css); */
+
+/* body {
+    background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+} */
+
+.top-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.content {
+    width: 1000px;
+}
+
+#contract, 
+#permanent, 
+#fullTime, 
+#partTime {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(255, 166, 0);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(129, 85, 3);
+}
